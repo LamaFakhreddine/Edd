@@ -1,25 +1,36 @@
 @import "../assets/scss/variables";
 
 .sidebar {
-   max-width: 10%;
-   background: rgba(51, 50, 50, 0.527);
+   width: 6.5%;
    height: 100vh;
-}
+   background: rgba(39, 39, 39, 0.527);
+   text-align: center;
 
-.navbar-brand {
-    .navbar-logo {
-        height: 7.5rem;
-        width: 7.5rem;
-        filter: invert(1);
-    }
-}
-
-
-.nav-link {
-    margin-top: 1.5rem;
-
-    i {
-        margin-right: 0.75rem;
+    .navbar-brand {
+        margin: 2rem auto;
+        .navbar-logo {
+            height: 2.25rem;
+            width: 5rem;
+            filter: invert(1);
+        }
     }
 
+    .navbar .container .navbar-nav .nav-link {
+        margin-top: 1.5rem;
+        color: $light-text;
+
+        i {
+            margin-bottom: 0.5rem;
+        }
+
+        &:hover, &:active, &:focus {
+            color: $sidebar-hover !important;
+            transition: all 0.4s ease-in-out;
+        }
+
+        &:visited {
+            color: $light-text;
+        }
+
+    }
 }
