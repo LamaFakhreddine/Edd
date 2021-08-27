@@ -2,10 +2,12 @@ $light-text: #ffffff;
 $dark-text: #202020;
 $cyan: #89c2af;
 $brown: #220808ab;
-$light-brown: #866967;
+$light-brown: #866967c4;
 $salmon: #e59595;
 $dark-salmon: #ac6965c9;
 $sidebar-hover: #9eddc8;
+$text-shadow: #7c7c7c1f;
+$box-shadow: #69696931;
 
 @mixin transparent-bg ($widthSize) {
     padding: 1.5rem 2rem;

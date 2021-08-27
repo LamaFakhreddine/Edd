@@ -1,6 +1,7 @@
 import React from 'react'
 import Time from './Time';
 import Day from './Day';
+import ProgressBar from './ProgressBar';
 import "./Welcome.scss";
 
 function Welcome(props) {
@@ -11,6 +12,8 @@ function Welcome(props) {
                 <Day />
                 <Time />
             </div>
+            <ProgressBar />
+
         </div>
     )
 }

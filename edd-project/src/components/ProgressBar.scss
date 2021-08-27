@@ -1,0 +1,28 @@
+@import "../assets/scss/variables";
+
+.steps-bar {
+    @include transparent-bg(86%);
+    list-style: none;
+    margin-top: 2rem;
+    color: $light-text;
+
+    .step{
+        margin: 0 auto 10px auto; 
+    }
+
+    .step-bubble {
+        margin-bottom: 0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 3px solid #ddd;
+        border-radius: 100%;
+        background-color: rgba(216, 216, 216, 0.377);
+        box-shadow: 0 2px 5px $box-shadow;
+    }
+
+    .completed {
+        background-color: $light-brown;
+        border-color: $light-brown;
+    }
+
+}

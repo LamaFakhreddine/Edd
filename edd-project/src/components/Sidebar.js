@@ -18,7 +18,7 @@ export default function NavbarSection() {
                         <Nav.Link href="#home" className="d-flex flex-column"><i className="fas fa-home fa-lg"></i>Home</Nav.Link>
                         <Nav.Link href="#calendar" className="d-flex flex-column"><i className="far fa-calendar fa-lg"></i>Calendar</Nav.Link>
                         <Nav.Link href="#pricing" className="d-flex flex-column"><i className="fas fa-tasks fa-lg"></i>Tasks</Nav.Link>
-                        <Nav.Link href="#profile" className="d-flex flex-column"><i class="fas fa-user-circle fa-2x"></i>Profile</Nav.Link>
+                        <Nav.Link href="#profile" className="d-flex flex-column"><i className="fas fa-user-circle fa-2x"></i>Profile</Nav.Link>
                     </Nav>
                     {/* 
                     <Nav className="align-self-end">
