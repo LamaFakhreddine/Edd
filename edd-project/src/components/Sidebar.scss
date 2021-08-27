@@ -1,20 +1,26 @@
 @import "../assets/scss/variables";
 
-.sidebar {
-   width: 6.5%;
-   height: 100vh;
-   background: rgba(39, 39, 39, 0.527);
-   text-align: center;
+.sidebar-grid-item {
+    width: 75%;
+    grid-column: 1 / 2;
+    grid-row: span all;
+    height: 100vh;
+    background: rgba(38, 38, 38, 0.5);
+    background: linear-gradient(85deg, rgba(39, 39, 39, 0.5) 0%, rgba(39, 39, 39, 0.3) 100%);
+    text-align: center;
+    box-shadow: 0 0 6px #47474757;
 
     .navbar-brand {
         margin: 2rem auto;
         .navbar-logo {
-            height: 2.25rem;
+            height: 2.15rem;
             width: 5rem;
             filter: invert(1);
         }
     }
-
+    .navbar .container .navbar-nav{
+        height:100%;
+    }
     .navbar .container .navbar-nav .nav-link {
         margin-top: 1.5rem;
         color: $light-text;

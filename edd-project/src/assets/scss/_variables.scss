@@ -2,7 +2,18 @@ $light-text: #ffffff;
 $dark-text: #202020;
 $cyan: #89c2af;
 $brown: #220808ab;
+$light-brown: #866967;
 $salmon: #e59595;
+$dark-salmon: #ac6965c9;
 $sidebar-hover: #9eddc8;
 
-
+@mixin transparent-bg ($widthSize) {
+    padding: 1.5rem 2rem;
+    background-color: #ffffff41;
+    width: $widthSize;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 3px 3px 8px #69696931;
+    letter-spacing: 0.15rem;
+    text-shadow: 0 3px 3px #7c7c7c1f;
+}

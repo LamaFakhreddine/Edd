@@ -1,0 +1,22 @@
+@import '../assets/scss/variables';
+
+.welcome-grid-item{
+    grid-row: span all;
+    grid-column: 2 / 6;
+    padding: 2.25rem 2rem;
+    // background-color: rgba(153, 205, 50, 0.377);
+}
+
+.header-text {
+    color: $light-text;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.date-time {
+    margin-top: 3rem;
+}
+
+
+
+

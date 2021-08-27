@@ -1,0 +1,14 @@
+@import "../assets/scss/variables";
+
+.time {
+    @include transparent-bg(40%);
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: $light-text;
+}
+
+.am-pm {
+    margin-left: 1rem;
+    font-size: 1.25rem;
+    font-weight: lighter;
+}

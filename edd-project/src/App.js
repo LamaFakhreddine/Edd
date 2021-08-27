@@ -1,14 +1,19 @@
 import React from "react";
-import { Router, Switch, Route } from "react-router-dom";
-import Sidebar from './components/Sidebar';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
+import Sidebar from './components/Sidebar';
+import Home from "./pages/Home";
 
 function App() {
   return (
-   <div>
+   <div className="grid-container">
+     <BrowserRouter>
         <Sidebar />
-    
+        <Switch>
+          <Route exact to="/" component={Home}/>
+        </Switch>
+      </BrowserRouter>
 
    </div>
   );
