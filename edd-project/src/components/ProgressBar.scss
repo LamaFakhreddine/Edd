@@ -1,28 +1,89 @@
 @import "../assets/scss/variables";
 
-.steps-bar {
+@mixin horizontal-bar($color) {
+    border-bottom: 4px solid;
+    border-color: $color;
+} 
+
+.progress-bar{
     @include transparent-bg(86%);
-    list-style: none;
     margin-top: 2rem;
-    color: $light-text;
 
-    .step{
-        margin: 0 auto 10px auto; 
+    h2{
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
     }
 
-    .step-bubble {
-        margin-bottom: 0.5rem;
-        width: 1.5rem;
-        height: 1.5rem;
-        border: 3px solid #ddd;
-        border-radius: 100%;
-        background-color: rgba(216, 216, 216, 0.377);
-        box-shadow: 0 2px 5px $box-shadow;
-    }
+    .steps-bar {
+        list-style: none;
+        color: $light-text;
+        padding-top: 1.5rem;
 
-    .completed {
-        background-color: $light-brown;
-        border-color: $light-brown;
-    }
 
+        .step{
+            margin: 0 auto 10px auto; 
+            z-index: 3;
+            text-decoration: none;
+            color: $light-text;
+
+            &::before {
+                    content: "";
+                    display: flex;
+                    width: 200%; 
+                    @include horizontal-bar(#fff);
+                    transform: translate(50%,350%);
+                    z-index: -1;
+            }
+            
+            // render horizontal bar for all steps except the last 
+            &:last-child{
+                padding-top: 4px;
+            }
+
+            &:last-child::before{
+                content: none;
+            }
+
+            &:hover, &:focus, &:active {
+                .step-bubble{
+                    background-color: rgb(223, 223, 223);
+                    border-color: #fff;
+                    transition: all 0.3s ease-in;
+                }
+            }
+
+            .step-bubble {
+                margin-bottom: 0.5rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                border: 3px solid #ddd;
+                border-radius: 100%;
+                background-color: #b3bdb9;
+                box-shadow: 0 2px 5px $box-shadow;
+            }
+            
+
+        
+            &.completed {
+
+                &::before{
+                    @include horizontal-bar($completed-2);
+                }
+            
+                .step-bubble{
+                    background-color: $completed-1;
+                    border-color: $completed-2;
+                }
+
+                &:hover, &:focus, &:active{
+                    .step-bubble{
+                        background-color: $completed-hover-1;
+                        border-color: $completed-hover-2;
+                        transition: all 0.3s ease-in;
+                    }
+                }
+            }
+        }
+    }
 }
