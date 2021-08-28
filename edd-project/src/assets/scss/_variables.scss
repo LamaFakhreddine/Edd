@@ -13,6 +13,11 @@ $completed-hover-2: #c5f1e3b0;
 $text-shadow: #7c7c7c1f;
 $box-shadow: #69696931;
 
+.full-screen {
+    width: 100vh;
+    height: 100vh;
+}
+
 @mixin transparent-bg ($widthSize) {
     padding: 1.5rem 2rem;
     background-color: #ffffff41;
@@ -23,3 +28,4 @@ $box-shadow: #69696931;
     letter-spacing: 0.15rem;
     text-shadow: 0 3px 3px #7c7c7c1f;
 }
+

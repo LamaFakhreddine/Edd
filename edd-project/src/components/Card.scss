@@ -1,0 +1,9 @@
+@import "../assets/scss/variables";
+
+.card-grid-item {
+    grid-row: span all;
+    grid-column: 6 / 11;
+    background-color: rgba(255, 255, 255, 0.856);
+    border-radius: 3%;
+    box-shadow: 0 10px 10px rgba(51, 51, 51, 0.541);
+}
