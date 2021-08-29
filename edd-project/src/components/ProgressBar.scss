@@ -6,7 +6,7 @@
 } 
 
 .progress-bar{
-    @include transparent-bg(86%);
+    @include transparent-bg(100%);
     margin-top: 2rem;
 
     h2{
@@ -18,7 +18,7 @@
     .steps-bar {
         list-style: none;
         color: $light-text;
-        padding-top: 1.5rem;
+        padding-top: 1rem;
 
 
         .step{

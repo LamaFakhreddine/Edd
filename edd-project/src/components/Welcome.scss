@@ -4,18 +4,34 @@
     grid-row: span all;
     grid-column: 2 / 6;
     padding: 2.25rem 2rem;
-    // background-color: rgba(153, 205, 50, 0.377);
+
+    .header-text {
+        color: $light-text;
+        font-weight: 900;
+        font-size: 3rem;
+    }
+
+    p {
+        @include sub-heading(left, $subheading-light);
+        font-size: 1.5rem;
+    }
+    
+    .date-time {
+        margin-top: 3rem;
+    }
+    
+    .svg-img {
+        position: absolute;
+        bottom:0;
+        left: 12.5%;
+        z-index: -3;
+        filter: opacity(0.8);
+        width: 35%;
+        height: 32%;
+    }
+
 }
 
-.header-text {
-    color: $light-text;
-    font-weight: 900;
-    font-size: 3rem;
-}
-
-.date-time {
-    margin-top: 3rem;
-}
 
 
 

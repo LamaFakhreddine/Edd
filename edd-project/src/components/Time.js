@@ -6,7 +6,7 @@ function Time() {
     const [time, setTime] = useState({
         hours : _time.getHours(),
         minutes: _time.getMinutes() < 10? "0" + _time.getMinutes()  : _time.getMinutes(),
-        amOrPm : "am"
+        amOrPm : _time.getHours() < 12? "am" : "pm"
     });
 
     useEffect((_time) => {

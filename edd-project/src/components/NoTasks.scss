@@ -1,0 +1,32 @@
+@import "../assets/scss/variables";
+
+.no-tasks {
+    margin-top: 20%;
+    p {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: center;
+        color: $dark-text-2;
+        margin-top: 2rem;
+
+        &.subheading {
+            @include sub-heading(center, $subheading-dark);
+            margin-top: 1rem;
+        }
+    }
+
+    img {
+        display: block;
+        width: 50%;
+        height: 50%;
+        filter:  opacity(0.75);
+        filter: saturate(0.7);
+        text-align: center;
+        margin-top: 0.75rem;
+    }
+
+    button {
+        display: block;
+        margin: 2.5rem auto;
+    }
+}

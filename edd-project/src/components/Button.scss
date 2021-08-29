@@ -1,0 +1,50 @@
+@import '../assets/scss/variables';
+
+.btn {
+    color: $light-text;
+    font-weight: 700;
+    box-shadow: 0 5px 8px $box-shadow ;
+
+    &:hover {
+        color: $light-text;
+        box-shadow: 0 3px 6px $box-shadow-2;
+        transition: 0.3s all ease-in;
+    }
+}
+
+.primary-btn {
+    // background-image: linear-gradient(to right, $btn-primary 0%, rgba(152,161,146,1) 60%, $dark-salmon 100%);
+    background-color: $btn-primary;
+    border-radius: $border-radius;
+    border: none;
+
+    &:hover, &:active, &:focus {
+        // background-position: right center;
+        background-color: $dark-salmon;
+    }
+}
+
+.secondary-btn{
+    border: 2px solid $btn-primary;
+    color: $btn-primary;
+    background: transparent;
+
+    &:hover, &:active, &:focus  {
+        background-color: $btn-primary;
+    }
+}
+
+.btn-l {
+    padding: 1.25rem 2rem;
+    font-size: 1.15rem;
+}
+
+.btn-m {
+    padding: 1rem 1.5rem;
+}
+
+.btn-long {
+    font-size: 1.15rem;
+    padding: 1rem 2.5rem;
+    width: 40%;
+}
