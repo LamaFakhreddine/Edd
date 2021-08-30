@@ -31,6 +31,7 @@
 
     &:hover, &:active, &:focus  {
         background-color: $btn-primary;
+        color:  $light-text;
     }
 }
 
@@ -41,6 +42,12 @@
 
 .btn-m {
     padding: 1rem 1.5rem;
+}
+
+.btn-s {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .btn-long {

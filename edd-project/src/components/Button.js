@@ -7,7 +7,7 @@ function Button({
     btnStyle
     }) {
     const STYLES = ['primary-btn','secondary-btn'];
-    const SIZES = ['btn-l','btn-m','btn-long'];
+    const SIZES = ['btn-l','btn-m','btn-s','btn-long'];
 
     const checkBtnStyle = STYLES.includes(btnStyle)? btnStyle : STYLES[0];
     const checkBtnSize = SIZES.includes(btnSize)? btnSize : SIZES[0];

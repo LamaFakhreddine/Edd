@@ -26,6 +26,7 @@
             z-index: 3;
             text-decoration: none;
             color: $light-text;
+            transition: 0.2s ease-in;
 
             &::before {
                     content: "";
@@ -61,6 +62,7 @@
                 border-radius: 100%;
                 background-color: #b3bdb9;
                 box-shadow: 0 2px 5px $box-shadow;
+                transition: 0.2s ease-in;
             }
             
 

@@ -1,12 +1,12 @@
 import React from 'react'
 import Welcome from '../components/Welcome'
-import TodayPlans from '../components/TodayPlans'
+import TodaysTasks from '../components/TodaysTasks'
 
 function Home() {
     return (
         <>
             <Welcome name="Lama" />
-            <TodayPlans />
+            <TodaysTasks />
         </>
     )
 }

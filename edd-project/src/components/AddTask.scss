@@ -1,0 +1,40 @@
+@import "../assets/scss/variables";
+
+.add-task {
+    margin: 1.5rem 0;
+    input, select {
+        background: $white;
+        border: 2px solid rgba(255, 255, 255, 0);
+        border-radius: $border-radius;
+        box-shadow: 0 5px 10px $box-shadow;
+        justify-content: space-around;
+        height: 40px;
+        transition: 0.3s all ease-in;
+
+        &.task-time {
+            margin-right: 0.25rem;
+            padding: 0.25rem;
+            width:8.5%;
+        }
+        &.task-time-am-pm{
+            margin-right: 0.75rem;
+        }
+        &.task-name {
+            width:60%; 
+            margin-right: 0.75rem;   
+        }
+
+        &:hover, &:focus, &:active, &:focus-visible {
+            border: 2px solid rgba(194, 194, 194, 0.521);
+            box-shadow: 0 5px 10px $box-shadow-2;
+            outline: none;
+            transition: 0.3s all ease-in;
+        }
+
+        .md-text {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+    }
+
+}

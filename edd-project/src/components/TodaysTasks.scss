@@ -9,7 +9,7 @@
     background: linear-gradient(180deg, $white 0%, rgba(255, 242, 242, 0.8) 50%, $white 100%);  
     box-shadow: 0 10px 10px #3333338a;
     border-top-left-radius: 3%;
-    padding: 2.25rem 3rem;
+    padding: 2.25rem 2rem;
 
     @include inverted-border-radius ($white);
 
