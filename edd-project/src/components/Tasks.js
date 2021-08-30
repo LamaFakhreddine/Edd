@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./Tasks.scss";
 import AddTask from "./AddTask";
+import TaskItem from './TaskItem';
 
 function Tasks(props) {
     // to toggle the add-task section
@@ -20,11 +21,18 @@ function Tasks(props) {
         }
     };
 
+    // a callback function that retrieves new task from the <AddTask /> child component
+    const childToParent = (task) => {
+        setTaskList([...taskList, task]);
+    }
+
     return (
         <div className="task-list">
             <button className="no-style" onClick={handleClick}>{addBtn}</button>
             {/* {taskList.length > 0 && <NoTasks />} */}
-            {toggle && <AddTask /> /* render AddTask only when we press the btn*/ }
+            { <AddTask childToParent={childToParent} /> /* render AddTask only when we press the btn*/ }
+            <TaskItem />
+          
             <ul>
             </ul>
         </div>
