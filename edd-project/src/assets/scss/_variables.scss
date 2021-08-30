@@ -1,23 +1,30 @@
-$cyan: #89c2af;
-$brown: #220808ab;
-$light-brown: #866967c4;
-$salmon: #e59595;
-$dark-salmon: rgba(173, 106, 103, 0.788);
+$cyan: #43ca9d;
+$cyan-2: #6bf7c6;
+$cyan-3: #9eddc8;
+$cyan-4: #b6e7d7;
+$brown: #360505ab;
+$light-brown: #8f6a67c4;
+$salmon: #e99191;
+$dark-salmon: rgba(173, 98, 95, 0.788);
+$white : #fff4f4;
+$black : #202020;
+$black-2: #202020c2;
+$gray: #585858c2;
 
-$light-text: #ffffff;
-$dark-text: #202020;
-$dark-text-2: #202020c2;
-$subheading-dark: #585858c2;
-$subheading-light: #e9e9e9da;
-$sidebar-hover: #9eddc8;
-$completed-1: #62c5a2;
-$completed-2: #9ef3d7b0;
-$completed-hover-1: #7cf8cd;
-$completed-hover-2: #c5f1e3b0;
+$light-text: $white;
+$dark-text: $black;
+$dark-text-2: $black-2;
+$subheading-dark: $gray;
+$subheading-light: #ece3e3da;
+$sidebar-hover: $cyan-3;
+$completed-1: $cyan;
+$completed-2: $cyan-3;
+$completed-hover-1: $cyan-2;
+$completed-hover-2: $cyan-4;
 $text-shadow: #7c7c7c1f;
 $box-shadow: #5a5a5a31;
 $box-shadow-2: #3333338a;
-$btn-primary: #6b998a;
+$btn-primary: #5b9984;
 $border-radius: 8px;
 
 .full-screen {
@@ -34,7 +41,7 @@ $border-radius: 8px;
 
 @mixin transparent-bg ($widthSize) {
     padding: 1.5rem 2rem;
-    background-color: #ffffff41;
+    background-color: #ffe9e941;
     width: $widthSize;
     border-radius: $border-radius;
     text-align: center;
@@ -43,15 +50,18 @@ $border-radius: 8px;
     text-shadow: 0 3px 3px #7c7c7c1f;
 }
 
-@mixin inverted-border-radius {
+@mixin inverted-border-radius ($color){
     &::before{
         content: "";
         position: absolute;
-        background-color: #0074D9;
-        bottom: -50px;
+        background-color: transparent;
+        bottom:0;
+        left: -25px;
         height: 50px;
         width: 25px;
-        border-top-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        box-shadow: 10px 20px 0 $color; /* This is where the magic happens! */
+        z-index: -2;
     }
     
 }
