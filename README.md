@@ -1,2 +1,2 @@
 # Edd
- A personal planner
+ A personal planner and a time management app. 
