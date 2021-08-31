@@ -8,32 +8,31 @@
     height: 4rem;
     width: 100%;
     padding: 0.25rem 1rem;
+    margin-top: 0.5rem;
     color: $dark-text;
     transition: 0.3s all ease-in;
+    font-size: 1.25rem;
 
     .task-time {
-        font-size: 1.75rem;
         font-weight: 800;
         color: $dark-salmon;
         margin-right: 0.25rem;
-    }
-
-    .task-time-am-pm {
-        font-size: 1rem;
-        color: $dark-salmon;
         padding-right: 1rem ;
         border-right: 1px solid #9b9b9b7e;
+    }
+    
+    .am-pm {
+        font-size: 1rem;
+        font-weight: 500;
+        // margin:0;
+        margin-left: 0.25rem;
+        padding: 0;
     }
 
     .task-name {
         margin-left: 1rem;
         overflow: auto;
         font-size: 1.15rem;
-    }
-
-    [contentEditable="true"]{
-        outline: none;
-        // border-bottom: 1px solid #9b9b9b7e;
     }
 
     .wrapper {
@@ -45,8 +44,8 @@
         .checkbox{
             border: 2px solid $btn-primary;
             border-radius: 5px;
-            height: 22px;
-            width: 22px;
+            height: 23px;
+            width: 23px;
             font-size: 14px;
             text-align: center;
 

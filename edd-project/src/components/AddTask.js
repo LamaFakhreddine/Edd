@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 import Button from './Button';
 import "./AddTask.scss";
 
-function AddTask({childToParent}) {
+function AddTask({ callBack }) {
     // list that stores subtasks of each task
     const initialState = {
-        hr: 0,
-        min: 0,
-        amPm: "AM",
+        time: new Date().toLocaleTimeString('en-US',{ hour: 'numeric', minute: 'numeric', hour12: true}),
         taskName: "",
     };
     const [newTask, setNewTask] = useState(initialState);
@@ -15,6 +13,7 @@ function AddTask({childToParent}) {
     const handleChange = (event) => {
         let targetName = event.target.name;
         let targetValue = event.target.value;
+        console.log("time is:" , targetValue)
         setNewTask({
             ...newTask,
             [targetName] : targetValue
@@ -23,58 +22,37 @@ function AddTask({childToParent}) {
 
     // set the final task
     const handleClick = (event) => {
-        setNewTask({
-            ...newTask
-        })
-        // send newTask info back to <Tasks /> parent component 
-        childToParent(newTask); 
-        // reset form
-        setNewTask(initialState);
+        if (newTask !== initialState){
+            setNewTask({
+                ...newTask
+            });
+            // send newTask info back to <Tasks /> parent component 
+            callBack(newTask); 
+            // reset state
+            setNewTask(initialState);
+        }
     }
 
     return (
         <div className="add-task d-flex">
-            <form id="add-task">
+            {/* <form> */}
                 <input required 
                     className="task-time"
-                    type="number"
-                    min="1" max="12"
-                    placeholder="HH"
-                    name="hr"
-                    value={newTask.hr}
-                    onChange={handleChange}/>
-                    
-                {/* <div className="md-text">:</div> */}
-
-                <input required  
-                    className="task-time"
-                    type="number" 
-                    min="0" max="59" 
-                    placeholder="MM" 
-                    name="min"
-                    value={newTask.min} 
-                    onChange={handleChange}/>
-
-                <select required 
-                    className="task-time-am-pm" 
-                    name="amPm" 
-                    value={newTask.amPm} 
-                    onChange={handleChange}>
-                    <option value="AM">AM</option>
-                    <option value='PM'>PM</option>
-                </select>
-                
+                    type="time"
+                    name="time"
+                    value={newTask.time}
+                    onChange={handleChange}/>                
                 <input required 
                     spellCheck="true"
                     className="task-name" 
                     type="text" 
                     placeholder="Task name" 
                     name="taskName"
-                    value={newTask.name} 
+                    value={newTask.taskName} 
                     onChange={handleChange} />
 
                 <Button btnStyle="secondary-btn" btnSize="btn-s" onClick={handleClick}>Add</Button>
-            </form>
+            {/* </form> */}
         </div>   
     
     )

@@ -4,7 +4,8 @@ import "./Button.scss";
 function Button({
     children,
     btnSize,
-    btnStyle
+    btnStyle,
+    onClick
     }) {
     const STYLES = ['primary-btn','secondary-btn'];
     const SIZES = ['btn-l','btn-m','btn-s','btn-long'];
@@ -13,7 +14,7 @@ function Button({
     const checkBtnSize = SIZES.includes(btnSize)? btnSize : SIZES[0];
 
     return (
-        <button className={`btn ${checkBtnStyle} ${checkBtnSize}`}>{children}</button>
+        <button className={`btn ${checkBtnStyle} ${checkBtnSize}`} onClick={onClick}>{children}</button>
     )
 }
 

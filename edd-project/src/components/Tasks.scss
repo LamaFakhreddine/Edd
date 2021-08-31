@@ -1,6 +1,6 @@
 @import "../assets/scss/variables.scss";
 
-.task-list {
+.tasks {
     margin: 1.25rem 0.5rem;
     .no-style {
         border: none;
@@ -17,6 +17,12 @@
             color: $cyan;
             transition: 0.1s ease-in-out;
         }
+    }
+
+    .task-list {
+        margin:0; 
+        padding: 0;
+        overflow-y: auto;
     }
 
 

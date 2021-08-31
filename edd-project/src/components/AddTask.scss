@@ -3,9 +3,9 @@
 .add-task {
     margin: 1.5rem 0;
 
-    form {
-        margin: 0;
-        padding: 0;
+    // form {
+    //     margin: 0;
+        // padding: 0;
         width: 100%;
 
         input, select {
@@ -18,16 +18,14 @@
             transition: 0.3s all ease-in;
 
             &.task-time {
-                font-size: 1.25rem;
-                margin-right: 0.25rem;
-                padding: 0.25rem;
-                width:8.5%;
-            }
-            &.task-time-am-pm{
+                font-size: 1rem;
                 margin-right: 0.75rem;
+                padding: 0.25rem;
+                width: 20%;
             }
+
             &.task-name {
-                width:58%; 
+                width:70%; 
                 margin-right: 1rem;  
                 padding: 0.25rem 0.5rem; 
             }
@@ -44,5 +42,5 @@
                 font-weight: 800;
             }
         }
-    }
+    // }
 }

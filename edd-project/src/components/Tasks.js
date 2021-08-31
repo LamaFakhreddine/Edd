@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./Tasks.scss";
 import AddTask from "./AddTask";
 import TaskItem from './TaskItem';
+// import NoTasks from './NoTasks';
 
 function Tasks(props) {
     // to toggle the add-task section
@@ -22,18 +23,25 @@ function Tasks(props) {
     };
 
     // a callback function that retrieves new task from the <AddTask /> child component
-    const childToParent = (task) => {
+    const callBack = (task) => {
         setTaskList([...taskList, task]);
+    };
+    // a callback that receives the task key to be deleted
+    const deleteTask = (key) => {
+        setTaskList(taskList.filter((item) => item.key !== key ));
     }
 
     return (
-        <div className="task-list">
+        <div className="tasks">
             <button className="no-style" onClick={handleClick}>{addBtn}</button>
             {/* {taskList.length > 0 && <NoTasks />} */}
-            { <AddTask childToParent={childToParent} /> /* render AddTask only when we press the btn*/ }
-            <TaskItem />
-          
-            <ul>
+            {toggle && <AddTask callBack={callBack} /> /* render AddTask only when we press the btn*/ }
+            <ul className="task-list">
+                {taskList.map((task) => {
+                    return (
+                        <TaskItem key={task.time+" "+task.name} task={task} callBack={deleteTask} />
+                    );
+                })}
             </ul>
         </div>
     )
