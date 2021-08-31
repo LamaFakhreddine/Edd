@@ -21,29 +21,43 @@
     .task-time-am-pm {
         font-size: 1rem;
         color: $dark-salmon;
-        margin-right: 1rem ;
+        padding-right: 1rem ;
+        border-right: 1px solid #9b9b9b7e;
     }
 
     .task-name {
-        padding-left: 1rem;
+        margin-left: 1rem;
         overflow: auto;
-        font-size: 1.25rem;
-        border-left: 1px solid rgba(155, 155, 155, 0.493);
+        font-size: 1.15rem;
     }
 
-    .checkbox-wrapper {
+    [contentEditable="true"]{
+        outline: none;
+        // border-bottom: 1px solid #9b9b9b7e;
+    }
+
+    .wrapper {
         padding-left: 1rem;
-        border-left: 1px solid rgba(155, 155, 155, 0.493);
+        border-left: 1px solid #9b9b9b7e;
+        color: $btn-primary;
+        gap: 0.5rem;
 
         .checkbox{
-            color: $completed-1;
-            border: 2px solid $completed-1;
+            border: 2px solid $btn-primary;
             border-radius: 5px;
-            height: 25px;
-            width: 25px;
+            height: 22px;
+            width: 22px;
+            font-size: 14px;
             text-align: center;
 
             &:hover {
+                cursor:pointer;
+            }
+        }
+        .delete {
+            font-size: 20px;
+
+            &:hover{
                 cursor:pointer;
             }
         }
