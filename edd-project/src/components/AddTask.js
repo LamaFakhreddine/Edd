@@ -7,16 +7,17 @@ function AddTask({ callBack }) {
     const initialState = {
         time: new Date().toLocaleTimeString('en-US',{ hour: 'numeric', minute: 'numeric', hour12: true}),
         taskName: "",
+        id: ""
     };
     const [newTask, setNewTask] = useState(initialState);
 
     const handleChange = (event) => {
         let targetName = event.target.name;
         let targetValue = event.target.value;
-        console.log("time is:" , targetValue)
         setNewTask({
             ...newTask,
-            [targetName] : targetValue
+            [targetName] : targetValue,
+            id : newTask.time + "_" + newTask.taskName
         })
     }
 

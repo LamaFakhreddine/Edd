@@ -2,31 +2,21 @@ import React, { useState, useEffect } from 'react';
 import "./Time.scss";
 
 function Time() {
-    const _time = new Date();
-    const [time, setTime] = useState({
-        hours : _time.getHours(),
-        minutes: _time.getMinutes() < 10? "0" + _time.getMinutes()  : _time.getMinutes(),
-        amOrPm : _time.getHours() < 12? "am" : "pm"
-    });
+    const [time, setTime] = useState(new Date().toLocaleTimeString("default", { hour: 'numeric', minute: 'numeric', hour12: true}));
 
     useEffect((_time) => {
-        _time = new Date();
-        const id =  setInterval(() => setTime({
-            hours : _time.getHours(),
-            minutes: _time.getMinutes() < 10? "0" + _time.getMinutes()  : _time.getMinutes(),
-            amOrPm: _time.getHours() < 12? "am" : "pm"
-        }), 1000);
+        const id =  setInterval(() => setTime(new Date().toLocaleTimeString("default", { hour: 'numeric', minute: 'numeric', hour12: true})), 1000);
         return () => {
             clearInterval(id);
         }
     }, []);
     
+    let amPm = time.slice(-2);
+    let newTime = time.replace(/am|pm/gi, "");
     return (
-        <div className="time"> 
-           {`${time.hours}:${time.minutes}`}
-           <span className="am-pm">
-                {time.amOrPm}  
-           </span>
+        <div className="time">
+            {newTime}
+            <span className="am-pm">{amPm}</span>
         </div>
     )
 }

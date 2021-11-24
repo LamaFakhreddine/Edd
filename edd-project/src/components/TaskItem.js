@@ -10,8 +10,9 @@ function TaskItem({callBack, task}, props) {
         setCompleted(!completed);
     }
 
+    // passes the id of the task to be deleted
     const handleDelete = (event) => {
-        callBack(props.key);
+        callBack(task.id);
     };
 
     // returns time in 12 hr format 
@@ -25,7 +26,7 @@ function TaskItem({callBack, task}, props) {
     }
 
     return (
-        <div className="task-item d-flex align-items-center" style={completed? {filter: "opacity(0.5)"} : {backgroundColor: "#fff4f4"}}>
+        <div id={props.id} className="task-item d-flex align-items-center" style={completed? {filter: "opacity(0.5)"} : {backgroundColor: "#fff4f4"}}>
             <div className="task-time">{hour12(task.time)}
                 <span className="am-pm">{amPm}</span>
             </div>
